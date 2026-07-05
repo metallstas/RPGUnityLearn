@@ -505,6 +505,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57df60d5cee1f0d4386d54dfddee882e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerName: Bob
+  agePlayer: 25
+  characterLevel: 80
+  currentHp: 0
+  moveSpeed: 2.5
+  gameOver: 0
   rb: {fileID: 1300831613}
 --- !u!1 &1589438663
 GameObject:
