@@ -505,13 +505,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57df60d5cee1f0d4386d54dfddee882e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerName: Bob
-  agePlayer: 25
-  characterLevel: 80
-  currentHp: 0
-  moveSpeed: 2.5
-  gameOver: 0
-  rb: {fileID: 1300831613}
+  moveSpeed: 3.5
+  jumpForce: 15
 --- !u!1 &1589438663
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,7 +518,6 @@ GameObject:
   - component: {fileID: 1589438665}
   - component: {fileID: 1589438664}
   - component: {fileID: 1589438666}
-  - component: {fileID: 1589438667}
   m_Layer: 0
   m_Name: Platform
   m_TagString: Untagged
@@ -647,33 +641,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!50 &1589438667
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1589438663}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 5
-  m_LinearDamping: 0
-  m_AngularDamping: 2
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 3
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
