@@ -1,8 +1,10 @@
+using System;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
     private Rigidbody2D rb;
+    private Animator anim;
 
     private float xInput;
     [SerializeField] private float moveSpeed = 3.5f;
@@ -12,12 +14,21 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponentInChildren<Animator>();
     }
 
     private void Update()
     {
         HandleInput();
         HandleMovemant();
+        HandleAnimations();
+    }
+
+    private void HandleAnimations()
+    {
+        bool isMoving = rb.linearVelocity.x != 0;
+
+        anim.SetBool("isMoving", isMoving);
     }
 
     private void HandleInput()
