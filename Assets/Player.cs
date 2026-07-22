@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     [SerializeField] private float moveSpeed = 3.5f;
     [SerializeField] private float jumpForce = 8f;
 
+    [SerializeField] private bool facingRight = true;
+
 
     private void Awake()
     {
@@ -21,6 +23,7 @@ public class Player : MonoBehaviour
     {
         HandleInput();
         HandleMovemant();
+        HandleFlip();
         HandleAnimations();
     }
 
@@ -50,5 +53,18 @@ public class Player : MonoBehaviour
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
     }
 
+    private void HandleFlip()
+    {
+        if (rb.linearVelocity.x > 0 && facingRight == false)
+            Flip();
+        else if (rb.linearVelocity.x < 0 && facingRight == true)
+            Flip();
+    }
+
+    private void Flip()
+    {
+        transform.Rotate(0, 180, 0);
+        facingRight = !facingRight;
+    }
 
 }
